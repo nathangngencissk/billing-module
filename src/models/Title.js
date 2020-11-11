@@ -16,7 +16,12 @@ const titleSchema = new Schema({
     },
     state: {
         type: String,
+        enum: ['ABERTO',
+            'SUBSTITUIDO',
+            'LIQUIDADO',
+            'CANCELADO'],
         require: true
+
     },
     type: {
         type: String,
@@ -31,6 +36,10 @@ const titleSchema = new Schema({
         require: true
     },
     document: {
+        type: String,
+        require: true
+    },
+    recipient: {
         type: String,
         require: true
     }
