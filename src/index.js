@@ -15,9 +15,11 @@ app.use(session({
 
 const title = require('./routes/title');
 const movement = require('./routes/movement');
+const document = require('./routes/document');
 
 app.use('/api/title', title);
 app.use('/api/movement', movement);
+app.use('/api/document', document);
 
 mongoose
     .connect('mongodb://db:27017/billing', {

@@ -35,7 +35,7 @@ const titleSchema = new Schema({
         type: Number,
         require: true
     },
-    document: {
+    transaction: {
         type: String,
         require: true
     },

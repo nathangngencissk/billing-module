@@ -1,5 +1,4 @@
 
-const axios = require('axios')
 const Title = require('../models/Title')
 const Movement = require('../models/Movement')
 
@@ -24,7 +23,7 @@ module.exports = () => {
             type: req.body.type,
             discount: req.body.discount,
             interest: req.body.interest,
-            document: req.body.document
+            transaction: req.body.transaction
         });
 
         newTitle
@@ -47,7 +46,7 @@ module.exports = () => {
             type: req.body.type,
             discount: req.body.discount,
             interest: req.body.interest,
-            document: req.body.document
+            transaction: req.body.transaction
         });
 
         Title.findOneAndUpdate({ _id: req.params.id }, newTitle, { new: true })

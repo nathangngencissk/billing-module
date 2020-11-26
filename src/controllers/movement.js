@@ -1,5 +1,3 @@
-
-const axios = require('axios')
 const Movement = require('../models/Movement')
 
 module.exports = () => {
@@ -17,7 +15,6 @@ module.exports = () => {
     controller.add = (req, res) => {
         const newMovement = new Movement({
             title: req.body.title,
-            type: req.body.type,
             originalValue: req.body.originalValue,
             interest: req.body.interest,
             fine: req.body.fine
@@ -37,7 +34,6 @@ module.exports = () => {
         const newMovement = new Movement({
             _id: req.params.id,
             title: req.body.title,
-            type: req.body.type,
             originalValue: req.body.originalValue,
             interest: req.body.interest,
             fine: req.body.fine

@@ -6,10 +6,6 @@ const movementSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Title"
     },
-    type: {
-        type: String,
-        require: true
-    },
     date: {
         type: Date,
         default: Date.now
